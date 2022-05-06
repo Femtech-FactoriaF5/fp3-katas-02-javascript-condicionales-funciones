@@ -5,9 +5,12 @@ describe("Funciones en JavaScript", () => {
         let name = "Rosa";
 
         // Escribe aquí tu funcion "saludar"
+        function saludar (name) {
+            //return ("Hola, ")+ name;
+            return `Hola, ${name}`;
+        }
         
-        
-        expect(saludar(name)).toBe("Hola, Rosa");
+        expect(saludar(name)).toBe("Hola, Rosa"); // result = 
     })
 
 
@@ -17,7 +20,9 @@ describe("Funciones en JavaScript", () => {
 
         // Escribe aquí tu función "suma"
         
-
+        function suma(num1, num2) {
+            return num1+num2;
+        }
         expect(suma(num1, num2)).toEqual(27);
     })
 
@@ -30,7 +35,10 @@ describe("Funciones en JavaScript", () => {
         let rainProbability = "10%";
 
         // Escribe aquí tu función "weatherReport" (fíjate en el 'expect' para saber qué debe retornar esta función).
-        
+        function weatherReport(userName, name, city, weather, rainProbability) {
+            return `Hola ${name} (${userName}), hoy en ${city} el tiempo es ${weather} y las probabilidades de lluvia son del ${rainProbability}.`;
+            
+        }
 
         expect(weatherReport(userName, name, city, weather, rainProbability)).toEqual("Hola Ada Martín (ada89), hoy en Las Vegas el tiempo es soleado y las probabilidades de lluvia son del 10%.");
     })
